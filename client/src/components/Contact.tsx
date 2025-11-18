@@ -68,8 +68,11 @@ export function Contact() {
       setSubmitStatus("error");
       toast({
         title: "Failed to send message",
-        description: error instanceof Error ? error.message : "Please try again later",
+        description: error instanceof Error 
+          ? `${error.message}. Please contact me directly at muhamamdmaaz65@gmail.com`
+          : "Please try again later or contact me directly at muhamamdmaaz65@gmail.com",
         variant: "destructive",
+        duration: 10000, // Show longer so user can see the email
       });
     }
   };
@@ -190,6 +193,23 @@ export function Contact() {
                       </>
                     )}
                   </Button>
+                  
+                  {submitStatus === "error" && (
+                    <div className="mt-4 p-4 bg-destructive/10 border border-destructive/20 rounded-lg">
+                      <p className="text-sm text-destructive font-medium mb-2">
+                        Unable to send message through the form.
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Please contact me directly at:{" "}
+                        <a 
+                          href="mailto:muhamamdmaaz65@gmail.com" 
+                          className="text-primary hover:underline font-semibold"
+                        >
+                          muhamamdmaaz65@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  )}
                 </form>
               </Form>
             </Card>

@@ -1,144 +1,157 @@
-# Developer Portfolio Website
+# Muhammad Maaz - Developer Portfolio
+
+A modern, responsive portfolio website showcasing full-stack development skills, projects, and experience.
 
 ## Overview
 
-This is a modern, responsive developer portfolio website built with React, TypeScript, and Tailwind CSS. The application showcases a full-stack developer's work, skills, and experience through an elegant, minimalist design with dark mode support. The portfolio features multiple sections including hero, about, skills, projects, experience, and contact, all built with smooth animations and professional UI components powered by shadcn/ui and Radix UI primitives.
+This is a professional single-page portfolio website built with React, TypeScript, and Express.js. It features a polished UI with dark/light theme toggle, smooth scroll animations, and a functional contact form with backend email integration.
+
+## Recent Changes
+
+**November 18, 2025** - Initial portfolio website build completed
+- Implemented all frontend sections: Hero, About, Skills, Projects, Experience, Contact, Footer
+- Built dark/light theme toggle with localStorage persistence (SSR-safe)
+- Created contact form with react-hook-form + Zod validation
+- Integrated backend email service using Nodemailer with Gmail SMTP
+- Added comprehensive animations using Framer Motion
+- Verified all features with end-to-end testing
+
+## Project Architecture
+
+### Frontend
+- **Framework**: React 18 with TypeScript, Vite build tool
+- **Styling**: Tailwind CSS with custom blue gradient design tokens
+- **Animations**: Framer Motion for scroll-triggered and hover animations
+- **Forms**: react-hook-form with zodResolver for validation
+- **Theme**: Dark/light mode via ThemeContext with localStorage persistence
+- **Icons**: Lucide React + React Icons (Simple Icons)
+- **Routing**: Wouter for client-side routing
+
+### Backend
+- **Server**: Express.js
+- **Email**: Nodemailer with Gmail SMTP (verified on startup)
+- **Validation**: Zod schemas for request validation
+- **Storage**: In-memory (no database required)
+
+### Key Features
+1. **Theme Toggle**: Dark/light mode with SSR-safe localStorage persistence
+2. **Smooth Animations**: Framer Motion scroll-triggered and hover effects
+3. **Contact Form**: Client-side validation with backend email delivery
+4. **Responsive Design**: Mobile-first with adaptive navigation
+5. **SEO Optimized**: Meta tags, Open Graph tags, semantic HTML
+
+### API Endpoints
+- `POST /api/contact` - Contact form submission with email delivery
+  - Request body: `{ name: string, email: string, message: string }`
+  - Validates with Zod schema (min 2 chars for name, min 10 chars for message)
+  - Sends email via Nodemailer to configured address
+  - Gracefully handles missing email configuration with console logging
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+### Personal Information
+- **Name**: Muhammad Maaz
+- **Title**: Full-Stack Developer & Mobile App Developer
+- **Email**: drtoolofficial@gmail.com
+- **GitHub**: @coding-with-maaz
+- **LinkedIn**: @coding-with-maaz
 
-## System Architecture
+### Featured Projects
+1. **ASIAN2DAY** - News aggregation platform (In Development)
+2. **GREEN_JOBS** - Job board for sustainability sector (Completed)
+3. **IELTS_MCQS** - IELTS practice test platform (Completed)
+4. **TODO_LIST_PY** - Task management app (Completed)
+5. **4mix-tools** - Developer utilities collection (In Development)
 
-### Frontend Architecture
+### Technical Skills
+- **Frontend & Mobile**: Flutter, Dart, React, JavaScript, TypeScript, HTML/CSS
+- **Backend & APIs**: Laravel, PHP, Node.js, Express, Python, RESTful APIs
+- **Databases & Tools**: MySQL, PostgreSQL, Git, Firebase, Postman
 
-**Framework & Build System**
-- React 18.2.0 with TypeScript for type-safe component development
-- Vite 5.0.0 as the build tool and development server for fast HMR and optimized production builds
-- Wouter for lightweight client-side routing
+### Design Preferences
+- Color scheme: Blue gradient accents (#2563eb primary)
+- Typography: Clean, modern sans-serif
+- Layout: Generous whitespace, card-based sections
+- Interactions: Subtle hover elevations, smooth transitions
+- Dark mode: Professional with proper contrast
 
-**UI Component System**
-- shadcn/ui component library (New York style) with Radix UI primitives providing accessible, customizable components
-- Tailwind CSS 3.3+ for utility-first styling with custom design tokens
-- Component architecture follows atomic design with ui components in `client/src/components/ui/`
-- Custom components in `client/src/components/` for section-based layouts (Hero, About, Skills, Projects, Experience, Contact, Header, Footer)
+## Environment Variables
 
-**Styling & Design System**
-- CSS custom properties for theme variables supporting light/dark modes
-- Design tokens defined in `client/src/index.css` with HSL color values
-- Tailwind configuration in `tailwind.config.ts` with extended color palette, border radius, and spacing
-- Responsive design with mobile-first approach using Tailwind breakpoints (sm: 640px, md: 768px, lg: 1024px, xl: 1280px, 2xl: 1536px)
-
-**State Management & Data Fetching**
-- React Context API for theme state management (ThemeContext)
-- TanStack Query (React Query) v5 for server state management and API calls
-- React Hook Form with Zod validation for form handling (contact form)
-- Local storage for theme persistence
-
-**Animations & Interactions**
-- Framer Motion for scroll-based animations, page transitions, and micro-interactions
-- Intersection Observer API (via Framer Motion's useInView) for triggering animations on scroll
-- Smooth scrolling navigation between sections
-
-### Backend Architecture
-
-**Server Framework**
-- Express.js server with TypeScript
-- Development mode uses Vite middleware for HMR
-- Production mode serves static assets from `dist/public`
-
-**Email Service**
-- Nodemailer integration for contact form submissions
-- Environment-based configuration (MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD)
-- Fallback to console logging when email is not configured
-- Form validation using Zod schemas from shared directory
-
-**API Design**
-- RESTful API endpoint: POST `/api/contact` for contact form submissions
-- Request/response logging middleware for API routes
-- JSON body parsing with raw body preservation for webhook support
-- CORS and security handled via middleware chain
-
-### Data Storage
-
-**Schema Definition**
-- Drizzle ORM configured for PostgreSQL (via Neon serverless driver)
-- Schema definitions in `shared/schema.ts` using Zod for validation
-- Type-safe data models exported for use across client and server
-
-**Current Data Models**
-- ContactFormData: Contact form validation schema
-- Project: Portfolio project interface with metadata
-- Experience: Work experience interface with timeline data
-- Skill: Technology skill interface with categorization
-
-**Storage Strategy**
-- In-memory storage implementation (MemStorage) for user data with CRUD interface
-- Database migration support via Drizzle Kit (`npm run db:push`)
-- PostgreSQL connection configured via DATABASE_URL environment variable
-
-### Project Structure
-
-**Monorepo Layout**
-- `/client` - React frontend application
-  - `/src/components` - React components
-  - `/src/pages` - Page components (Home, NotFound)
-  - `/src/contexts` - React context providers
-  - `/src/hooks` - Custom React hooks
-  - `/src/lib` - Utility functions and query client
-- `/server` - Express backend
-  - `index.ts` - Server entry point with middleware setup
-  - `routes.ts` - API route handlers
-  - `storage.ts` - Data storage interface and implementation
-  - `vite.ts` - Vite integration for development
-- `/shared` - Shared types and schemas between client and server
-- `/attached_assets` - Static assets and design documentation
-
-**Configuration Files**
-- `tsconfig.json` - TypeScript configuration with path aliases (@/, @shared/, @assets/)
-- `vite.config.ts` - Vite build configuration with React plugin
-- `tailwind.config.ts` - Tailwind CSS theming and customization
-- `drizzle.config.ts` - Database ORM configuration
-- `components.json` - shadcn/ui component configuration
-
-## External Dependencies
-
-### Third-Party UI Libraries
-- **Radix UI** - Headless UI component primitives (accordion, dialog, dropdown, select, tabs, toast, etc.)
-- **shadcn/ui** - Pre-built component library built on Radix UI
-- **Framer Motion** - Animation library for React
-- **React Icons** - Icon library (currently using Lucide icons via lucide-react)
-- **class-variance-authority** - Utility for creating variant-based component APIs
-- **cmdk** - Command menu component
-
-### Form & Validation
-- **React Hook Form** - Form state management
-- **@hookform/resolvers** - Validation resolver integration
-- **Zod** - Schema validation library
-- **drizzle-zod** - Zod schema generation from Drizzle ORM schemas
-
-### Backend Services
-- **Nodemailer** - Email sending service for contact form
-- **@neondatabase/serverless** - Neon PostgreSQL serverless driver
-- **Drizzle ORM** - TypeScript ORM for SQL databases
-- **connect-pg-simple** - PostgreSQL session store
-
-### Development Tools
-- **Replit Plugins** - Development environment enhancements (vite-plugin-runtime-error-modal, vite-plugin-cartographer, vite-plugin-dev-banner)
-- **PostCSS & Autoprefixer** - CSS processing
-- **esbuild** - Fast JavaScript bundler for production server build
-
-### Email Configuration
-Email functionality requires environment variables:
+Required for production email functionality:
 - `MAIL_HOST` - SMTP server hostname
 - `MAIL_PORT` - SMTP server port
 - `MAIL_USERNAME` - SMTP authentication username
 - `MAIL_PASSWORD` - SMTP authentication password
 - `MAIL_FROM_ADDRESS` - Sender email address
 - `MAIL_FROM_NAME` - Sender display name
+- `SESSION_SECRET` - Session encryption secret
 
-When not configured, the contact form logs submissions to console instead of sending emails.
+Note: If email variables are not configured, the contact form will log submissions to console instead of sending emails.
 
-### Database Configuration
-PostgreSQL database connection via:
-- `DATABASE_URL` - PostgreSQL connection string (required for Drizzle migrations)
+## Running the Project
+
+The project runs on a single command:
+```bash
+npm run dev
+```
+
+This starts both the Express backend (serving API routes) and Vite frontend (serving React app) on port 5000.
+
+The workflow "Start application" is pre-configured to run this command automatically.
+
+## File Structure
+
+```
+├── client/
+│   ├── src/
+│   │   ├── components/      # All UI components
+│   │   │   ├── Header.tsx   # Navigation + theme toggle
+│   │   │   ├── Hero.tsx     # Landing section
+│   │   │   ├── About.tsx    # About section
+│   │   │   ├── Skills.tsx   # Skills showcase
+│   │   │   ├── Projects.tsx # Project portfolio
+│   │   │   ├── Experience.tsx # Work history
+│   │   │   ├── Contact.tsx  # Contact form
+│   │   │   └── Footer.tsx   # Footer section
+│   │   ├── contexts/
+│   │   │   └── ThemeContext.tsx # Theme state management
+│   │   ├── pages/
+│   │   │   └── Home.tsx     # Main page
+│   │   ├── App.tsx          # Root component
+│   │   └── index.css        # Global styles + theme tokens
+├── server/
+│   ├── routes.ts            # API endpoints (contact form)
+│   └── index.ts             # Express server setup
+├── shared/
+│   └── schema.ts            # Zod schemas for validation
+├── design_guidelines.md     # Design system documentation
+└── tailwind.config.ts       # Tailwind configuration
+```
+
+## Testing
+
+All features have been verified with end-to-end testing:
+- ✅ Theme toggle (dark/light mode with localStorage)
+- ✅ Smooth scroll navigation to all sections
+- ✅ Contact form validation (client-side with react-hook-form)
+- ✅ Contact form submission (with backend email)
+- ✅ Responsive design (desktop and mobile)
+- ✅ All animations and transitions
+- ✅ Social media links and external navigation
+
+## Next Steps for Production
+
+1. **Email Configuration**: Ensure all MAIL_* environment variables are set
+2. **Domain Setup**: Configure custom domain if desired
+3. **Analytics**: Add Google Analytics or similar tracking
+4. **Performance**: Optimize images and implement lazy loading
+5. **Content**: Update projects and experience as needed
+6. **Publishing**: Use Replit's publish feature to deploy
+
+## Notes
+
+- The contact form uses react-hook-form with zodResolver for robust client-side validation
+- ThemeProvider safely handles localStorage with SSR-safe deferred loading
+- Email transport is verified on server startup to catch configuration issues early
+- All interactive elements have data-testid attributes for testing reliability
+- Design follows design_guidelines.md for consistent visual quality

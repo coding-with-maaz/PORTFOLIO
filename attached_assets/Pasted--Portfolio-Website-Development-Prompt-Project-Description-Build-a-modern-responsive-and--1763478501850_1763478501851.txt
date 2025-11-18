@@ -8,7 +8,7 @@ Build a modern, responsive, and visually polished developer portfolio website us
 
 - **Name**: Muhammad Maaz
 - **GitHub**: @coding-with-maaz
-- **Email**: drtoolofficial@gmail.com
+- **Email**: muhamamdmaaz65@gmail.com
 - **Role**: Full-Stack Developer & Mobile App Developer
 
 ## Technical Requirements
@@ -45,7 +45,7 @@ Build a modern, responsive, and visually polished developer portfolio website us
 #### Hero Section
 - Introduction with animated elements
 - Name, title, and description
-- Social media links (GitHub, LinkedIn, Email)
+- Social media links (GitHub, Email)
 - Quick stats cards (Full-Stack, Mobile Apps, Backend APIs)
 - Call-to-action buttons
 - Smooth scroll indicator
@@ -72,10 +72,6 @@ Build a modern, responsive, and visually polished developer portfolio website us
   - Professional card design with gradients
 - Projects to include:
   - ASIAN2DAY (Streaming Platform) - Laravel, Node.js, Flutter, MySQL
-  - GREEN_JOBS - TypeScript, React
-  - IELTS_MCQS - TypeScript
-  - TODO_LIST_PY - Python
-  - 4mix-tools - JavaScript
 - Call-to-action banner at bottom
 
 #### Experience Section
@@ -94,9 +90,8 @@ Build a modern, responsive, and visually polished developer portfolio website us
   - Success/error status messages
   - Loading states
 - Contact information cards:
-  - Email: drtoolofficial@gmail.com
+  - Email: muhamamdmaaz65@gmail.com
   - GitHub: coding-with-maaz
-  - LinkedIn: coding-with-maaz
 
 #### Footer
 - Developer information

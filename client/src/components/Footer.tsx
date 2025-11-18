@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Mail, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const quickLinks = [
@@ -12,8 +12,7 @@ const quickLinks = [
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/coding-with-maaz", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/coding-with-maaz", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:drtoolofficial@gmail.com", label: "Email" },
+  { icon: Mail, href: "mailto:muhamamdmaaz65@gmail.com", label: "Email" },
 ];
 
 export function Footer() {

@@ -15,54 +15,48 @@ const projects: Project[] = [
     status: "Production",
     category: "Web Platform",
     technologies: ["Laravel", "Node.js", "Flutter", "MySQL"],
-    githubUrl: "https://github.com/coding-with-maaz",
+    githubUrl: "https://github.com/coding-with-maaz/NETFLEX_CLONE",
+    demoUrl: "https://nazaarabox.com",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: "2",
-    title: "GREEN_JOBS",
-    description: "Job marketplace platform connecting environmental professionals with sustainable career opportunities. Features advanced search, filtering, and application management.",
-    status: "Active",
-    category: "Web Application",
-    technologies: ["TypeScript", "React", "Node.js"],
-    githubUrl: "https://github.com/coding-with-maaz",
+    title: "Medzfitt E-commerce",
+    description: "Complete Laravel-based e-commerce platform for medical wear and scrubs. Features product management, shopping cart, order processing, user reviews, and comprehensive admin dashboard.",
+    status: "Production",
+    category: "E-commerce",
+    technologies: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    githubUrl: "https://github.com/coding-with-maaz/Ecomerce_Store",
+    demoUrl: "https://medzfitt.com",
     gradient: "from-green-500 to-emerald-500",
   },
   {
     id: "3",
-    title: "IELTS_MCQS",
-    description: "Comprehensive IELTS preparation platform with practice tests, progress tracking, and detailed performance analytics to help students achieve their target scores.",
+    title: "TAGIQ - AI Keyword Generator",
+    description: "Intelligent keyword and hashtag generator tool that scrapes trending keywords from Google, YouTube, TikTok, Bing, and Amazon. Built with Node.js, Express, and Puppeteer for web scraping with Flutter mobile app support.",
     status: "Active",
-    category: "Educational",
-    technologies: ["TypeScript", "React", "Firebase"],
-    githubUrl: "https://github.com/coding-with-maaz",
+    category: "Developer Tools",
+    technologies: ["Node.js", "Express", "Puppeteer", "Flutter", "TypeScript"],
+    githubUrl: "https://github.com/coding-with-maaz/_TAGIQ_",
     gradient: "from-purple-500 to-pink-500",
   },
   {
     id: "4",
-    title: "TODO_LIST_PY",
-    description: "Feature-rich task management application with priority levels, due dates, categories, and productivity insights. Clean interface for efficient task organization.",
-    status: "Complete",
-    category: "Productivity",
-    technologies: ["Python", "Flask", "SQLite"],
-    githubUrl: "https://github.com/coding-with-maaz",
-    gradient: "from-orange-500 to-red-500",
-  },
-  {
-    id: "5",
-    title: "4mix-tools",
-    description: "Collection of developer utilities and tools for enhancing productivity. Includes code formatters, converters, and other helpful development aids.",
+    title: "Flutter Ads Pro",
+    description: "Comprehensive Flutter ads integration package with easy-to-reuse setup for all major ad networks. Supports Android, iOS, Web, Windows, macOS, and Linux platforms with simplified configuration and implementation.",
     status: "Active",
-    category: "Developer Tools",
-    technologies: ["JavaScript", "Node.js", "Express"],
-    githubUrl: "https://github.com/coding-with-maaz",
-    gradient: "from-indigo-500 to-purple-500",
+    category: "Mobile App",
+    technologies: ["Flutter", "Dart", "Android", "iOS"],
+    githubUrl: "https://github.com/coding-with-maaz/FLUTTER-_ADS",
+    gradient: "from-orange-500 to-red-500",
   },
 ];
 
 const categoryIcons = {
   "Web Platform": Globe,
   "Web Application": Code2,
+  "E-commerce": Globe,
+  "Mobile App": Smartphone,
   Educational: Code2,
   Productivity: Code2,
   "Developer Tools": Code2,
@@ -164,7 +158,7 @@ export function Projects() {
                           rel="noopener noreferrer"
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Demo
+                          Visit
                         </a>
                       </Button>
                     )}

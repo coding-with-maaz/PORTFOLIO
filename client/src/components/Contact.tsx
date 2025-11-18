@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Github, Linkedin, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, Github, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -18,8 +18,8 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "drtoolofficial@gmail.com",
-    href: "mailto:drtoolofficial@gmail.com",
+    value: "muhamamdmaaz65@gmail.com",
+    href: "mailto:muhamamdmaaz65@gmail.com",
     color: "from-blue-500 to-cyan-500",
     testId: "contact-email",
   },
@@ -30,14 +30,6 @@ const contactMethods = [
     href: "https://github.com/coding-with-maaz",
     color: "from-purple-500 to-pink-500",
     testId: "contact-github",
-  },
-  {
-    icon: Linkedin,
-    title: "LinkedIn",
-    value: "@coding-with-maaz",
-    href: "https://linkedin.com/in/coding-with-maaz",
-    color: "from-orange-500 to-red-500",
-    testId: "contact-linkedin",
   },
 ];
 

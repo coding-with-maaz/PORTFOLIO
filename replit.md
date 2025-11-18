@@ -52,16 +52,14 @@ This is a professional single-page portfolio website built with React, TypeScrip
 ### Personal Information
 - **Name**: Muhammad Maaz
 - **Title**: Full-Stack Developer & Mobile App Developer
-- **Email**: drtoolofficial@gmail.com
+- **Email**: muhamamdmaaz65@gmail.com
 - **GitHub**: @coding-with-maaz
-- **LinkedIn**: @coding-with-maaz
 
 ### Featured Projects
-1. **ASIAN2DAY** - News aggregation platform (In Development)
-2. **GREEN_JOBS** - Job board for sustainability sector (Completed)
-3. **IELTS_MCQS** - IELTS practice test platform (Completed)
-4. **TODO_LIST_PY** - Task management app (Completed)
-5. **4mix-tools** - Developer utilities collection (In Development)
+1. **ASIAN2DAY** - Advanced streaming platform featuring live content delivery, user authentication, and real-time interactions (Production)
+2. **Medzfitt E-commerce** - Complete Laravel-based e-commerce platform for medical wear and scrubs with product management, shopping cart, and admin dashboard (Production)
+3. **TAGIQ - AI Keyword Generator** - Intelligent keyword and hashtag generator tool that scrapes trending keywords from Google, YouTube, TikTok, Bing, and Amazon (Active)
+4. **Flutter Ads Pro** - Comprehensive Flutter ads integration package with easy-to-reuse setup for all major ad networks, supporting multiple platforms (Active)
 
 ### Technical Skills
 - **Frontend & Mobile**: Flutter, Dart, React, JavaScript, TypeScript, HTML/CSS

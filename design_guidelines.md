@@ -82,7 +82,7 @@
 - Two-column layout (form + contact info cards)
 - Form with name, email, message fields
 - Clear success/error feedback states
-- Contact method cards (Email, GitHub, LinkedIn) with icons
+- Contact method cards (Email, GitHub) with icons
 
 ### Footer
 - Three-column layout (developer info, quick links, social media)

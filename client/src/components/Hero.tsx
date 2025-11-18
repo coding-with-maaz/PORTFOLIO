@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown, Code, Smartphone, Server } from "lucide-react";
+import { Github, Mail, ArrowDown, Code, Smartphone, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/coding-with-maaz", label: "GitHub", testId: "link-github" },
-  { icon: Linkedin, href: "https://linkedin.com/in/coding-with-maaz", label: "LinkedIn", testId: "link-linkedin" },
-  { icon: Mail, href: "mailto:drtoolofficial@gmail.com", label: "Email", testId: "link-email" },
+  { icon: Mail, href: "mailto:muhamamdmaaz65@gmail.com", label: "Email", testId: "link-email" },
 ];
 
 const stats = [

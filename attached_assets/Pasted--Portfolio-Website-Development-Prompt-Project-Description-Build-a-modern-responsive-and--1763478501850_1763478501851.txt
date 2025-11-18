@@ -1,0 +1,268 @@
+# Portfolio Website Development Prompt
+
+## Project Description
+
+Build a modern, responsive, and visually polished developer portfolio website using React.js and Tailwind CSS. The design should be clean, minimalistic, fast, and professional, with a strong focus on readability, animations, and developer branding.
+
+## Developer Information
+
+- **Name**: Muhammad Maaz
+- **GitHub**: @coding-with-maaz
+- **Email**: drtoolofficial@gmail.com
+- **Role**: Full-Stack Developer & Mobile App Developer
+
+## Technical Requirements
+
+### Core Technologies
+- **React 18.2.0** - UI library
+- **Vite 5.0.0** - Build tool and dev server
+- **Tailwind CSS 3.3.5** - Utility-first CSS framework
+- **Framer Motion 10.16.4** - Animation library
+- **React Icons 4.11.0** - Icon library
+- **EmailJS 3.11.0** - Email service integration
+
+### Development Tools
+- ESLint for code linting
+- PostCSS for CSS processing
+- Autoprefixer for vendor prefixing
+
+## Required Features
+
+### 1. Dark Mode Support
+- Toggle between light and dark themes
+- Persistent theme preference (localStorage)
+- System preference detection on first load
+- Smooth theme transitions
+- Animated sun/moon toggle button in header
+
+### 2. Responsive Design
+- Mobile-first approach
+- Breakpoints: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1536px)
+- Works seamlessly on all devices
+
+### 3. Sections Required
+
+#### Hero Section
+- Introduction with animated elements
+- Name, title, and description
+- Social media links (GitHub, LinkedIn, Email)
+- Quick stats cards (Full-Stack, Mobile Apps, Backend APIs)
+- Call-to-action buttons
+- Smooth scroll indicator
+
+#### About Section
+- Personal information and background
+- Feature cards with icons (Full-Stack Development, Problem Solving, Continuous Learning)
+- Statistics banner (Projects Completed, Development Focus, Learning & Growing)
+
+#### Skills Section
+- Tech stack organized by categories:
+  - Frontend & Mobile: Flutter, Dart, React, TypeScript, JavaScript, HTML5, CSS3
+  - Backend & APIs: Laravel, PHP, Node.js, Express.js, REST API
+  - Databases & Tools: MySQL, PostgreSQL, SQLite, Git, Docker, Firebase, AdMob
+- Icons for each technology
+- Hover effects and animations
+
+#### Projects Section
+- Featured projects showcase with:
+  - Project title, description, and status badges
+  - Tech stack tags
+  - Category icons
+  - GitHub and demo links
+  - Professional card design with gradients
+- Projects to include:
+  - ASIAN2DAY (Streaming Platform) - Laravel, Node.js, Flutter, MySQL
+  - GREEN_JOBS - TypeScript, React
+  - IELTS_MCQS - TypeScript
+  - TODO_LIST_PY - Python
+  - 4mix-tools - JavaScript
+- Call-to-action banner at bottom
+
+#### Experience Section
+- Work experience timeline
+- Professional cards with:
+  - Job title and company
+  - Location and period
+  - Description and technologies
+  - Category icons and colors
+- Timeline design with connecting line
+
+#### Contact Section
+- Contact form with:
+  - Name, email, and message fields
+  - Form validation
+  - Success/error status messages
+  - Loading states
+- Contact information cards:
+  - Email: drtoolofficial@gmail.com
+  - GitHub: coding-with-maaz
+  - LinkedIn: coding-with-maaz
+
+#### Footer
+- Developer information
+- Quick navigation links
+- Social media icons
+- Copyright information
+
+### 4. Navigation Header
+- Fixed header with scroll effect
+- Smooth scrolling navigation
+- Mobile responsive menu
+- Theme toggle button
+- Logo/branding
+
+## Design Specifications
+
+### Color Scheme
+- **Primary Colors**: Blue gradient (primary-600 to primary-800)
+- **Light Mode**: 
+  - Background: White and light gray
+  - Text: Dark gray/black
+- **Dark Mode**:
+  - Background: Dark gray/black
+  - Text: Light gray/white
+- **Accent Colors**: Primary blue for highlights and CTAs
+
+### Typography
+- Clean, modern sans-serif fonts
+- Responsive font sizes
+- Proper hierarchy with section titles and subtitles
+
+### Component Styling
+- **Cards**: 
+  - Rounded corners (rounded-xl, rounded-2xl)
+  - Shadows with hover effects
+  - Borders for dark mode
+  - Gradient overlays on hover
+- **Buttons**: 
+  - Primary: Gradient backgrounds with hover states
+  - Secondary: Outlined with hover effects
+  - Smooth animations
+- **Forms**: 
+  - Clean inputs with focus states
+  - Dark mode support
+  - Placeholder styling
+
+### Animations
+- Fade-in animations on scroll (Framer Motion)
+- Hover effects on cards and buttons
+- Smooth page transitions
+- Theme toggle animations (rotate and fade)
+- Staggered children animations
+
+## Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx          # Navigation with theme toggle
+│   │   ├── Hero.jsx            # Introduction section
+│   │   ├── About.jsx           # About me section
+│   │   ├── Skills.jsx          # Tech stack showcase
+│   │   ├── Projects.jsx         # Featured projects
+│   │   ├── Experience.jsx       # Work experience timeline
+│   │   ├── Contact.jsx          # Contact form and info
+│   │   ├── Footer.jsx           # Footer component
+│   │   └── ThemeToggle.jsx     # Dark/light mode toggle
+│   ├── context/
+│   │   └── ThemeContext.jsx    # Theme context provider
+│   ├── services/
+│   │   └── emailService.js     # Email service (EmailJS/Backend)
+│   ├── App.jsx                  # Main app component
+│   ├── main.jsx                 # Entry point
+│   └── index.css                # Global styles with Tailwind
+├── .env.example                 # Environment variables template
+├── package.json                 # Dependencies
+├── tailwind.config.js           # Tailwind configuration with dark mode
+├── vite.config.js               # Vite configuration
+└── index.html                   # HTML template
+```
+
+## Implementation Details
+
+### Dark Mode Implementation
+- Use `darkMode: 'class'` in Tailwind config
+- ThemeContext for state management
+- localStorage for persistence
+- All components use `dark:` utility classes
+- Smooth color transitions (duration-300)
+
+### Email Functionality
+- Support EmailJS (frontend-only, recommended)
+- Support Laravel backend API (optional)
+- Environment variables for configuration
+- Form validation and error handling
+- Success/error status messages
+
+### Animations
+- Use Framer Motion for all animations
+- `useInView` hook for scroll-triggered animations
+- Staggered children animations
+- Smooth hover effects
+- Theme toggle with AnimatePresence
+
+### Responsive Design
+- Mobile-first CSS approach
+- Tailwind responsive utilities (sm:, md:, lg:, xl:)
+- Flexible grid layouts
+- Responsive typography
+- Mobile navigation menu
+
+## Code Quality Requirements
+
+- Clean, readable code
+- Reusable components
+- Proper prop types
+- ESLint configuration
+- Consistent naming conventions
+- Comments for complex logic
+
+## Performance Requirements
+
+- Fast loading times (Vite optimization)
+- Optimized images and assets
+- Lazy loading where appropriate
+- Smooth 60fps animations
+- SEO-friendly structure
+
+## Accessibility Requirements
+
+- Semantic HTML
+- ARIA labels where needed
+- Keyboard navigation support
+- Focus states on interactive elements
+- Color contrast compliance
+
+## Deployment Configuration
+
+- Build command: `npm run build`
+- Output directory: `dist`
+- Environment variables support
+- Static site ready
+
+## Customization Points
+
+All content should be easily customizable:
+- Personal information in components
+- Projects array in Projects.jsx
+- Experience array in Experience.jsx
+- Skills array in Skills.jsx
+- Colors in tailwind.config.js
+- Social media links throughout
+
+## Expected Output
+
+A fully functional, production-ready portfolio website that:
+- ✅ Works on all devices and browsers
+- ✅ Has smooth animations and transitions
+- ✅ Supports dark/light mode with persistence
+- ✅ Includes all required sections
+- ✅ Has working contact form
+- ✅ Is optimized for performance
+- ✅ Follows best practices
+- ✅ Is ready for deployment
+
+---
+
+**Use this prompt to build or recreate the portfolio website with all specified features, design elements, and functionality.**

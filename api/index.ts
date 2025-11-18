@@ -40,5 +40,6 @@ app.use(async (req, res, next) => {
   next();
 });
 
+// Export the Express app for Vercel
 export default app;
 

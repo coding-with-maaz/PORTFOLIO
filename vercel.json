@@ -4,14 +4,15 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": null,
+  "functions": {
+    "api/index.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/server/index.ts"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/server/index.ts"
+      "destination": "/api/index.ts"
     }
   ]
 }

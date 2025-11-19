@@ -41,6 +41,17 @@ const projects: Project[] = [
     gradient: "from-purple-500 to-pink-500",
   },
   {
+    id: "5",
+    title: "JOB2DAY - Job Board Platform",
+    description: "Comprehensive job board platform with RESTful APIs for job postings, applications, user authentication, and notifications. Built scalable backend with Node.js and Express, supporting Flutter mobile app with real-time features and analytics.",
+    status: "Production",
+    category: "Web Platform",
+    technologies: ["Node.js", "Express", "MySQL", "Sequelize", "Firebase", "Flutter", "TypeScript"],
+    githubUrl: "https://github.com/coding-with-maaz/JOB2DAY-BACKEND",
+    demoUrl: "https://frontend.harpaljob.com",
+    gradient: "from-indigo-500 to-blue-500",
+  },
+  {
     id: "4",
     title: "Flutter Ads Pro",
     description: "Comprehensive Flutter ads integration package with easy-to-reuse setup for all major ad networks. Supports Android, iOS, Web, Windows, macOS, and Linux platforms with simplified configuration and implementation.",

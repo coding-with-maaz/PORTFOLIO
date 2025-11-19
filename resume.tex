@@ -1,0 +1,195 @@
+%-------------------------
+% Resume in Latex
+% Author : Muhammad Maaz
+% Based on: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.25in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Muhammad Maaz} & \\
+\end{tabular*}
+
+\vspace{-2pt}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \href{mailto:muhamamdmaaz65@gmail.com}{Email} $|$ 
+  \href{https://github.com/coding-with-maaz}{GitHub} $|$ 
+  \href{https://muhammad-maaz-jet.vercel.app}{Portfolio} & \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Full-stack developer specializing in Node.js backend development and scalable web applications. Experienced in building RESTful APIs, server-side architecture, and end-to-end solutions with modern JavaScript frameworks.
+  }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-1pt]
+  \small{\item{
+    \textbf{Full-Stack Developer} \hfill \textit{2023 - 2025} \\
+    \textit{Spark Zone Technologies} \hfill \textit{Remote} \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Developed scalable web applications using Node.js, Express.js, and TypeScript. Built RESTful APIs and server-side architecture for production applications.
+      \item Collaborated with cross-functional teams, implementing best practices for code quality, testing, and deployment.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{Full-Stack Developer} \hfill \textit{2022 - Present} \\
+    \textit{Freelance} \hfill \textit{Remote} \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Developed end-to-end web applications using React, TypeScript, and Laravel with RESTful APIs. Created cross-platform mobile apps using Flutter with real-time features.
+      \item Designed scalable backend systems using Laravel and Node.js, managing MySQL/PostgreSQL databases. Delivered 15+ projects including e-commerce platforms and streaming services.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{Mobile App Developer} \hfill \textit{2021 - Present} \\
+    \textit{Independent Projects} \hfill \textit{Remote} \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Specialized in Flutter development, creating reusable packages and publishing multiple apps on Google Play Store with authentication and real-time updates.
+    \end{itemize}
+  }}
+\end{itemize}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-1pt]
+  \small{\item{
+    \textbf{TAGIQ - AI Keyword Generator} \href{https://github.com/coding-with-maaz/_TAGIQ_}{[GitHub]} \\
+    \textit{Tech Stack:} Node.js, Express, Puppeteer, Flutter, TypeScript \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Intelligent keyword generator scraping trending keywords from Google, YouTube, TikTok, Bing, and Amazon using Puppeteer with Flutter mobile app support.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{JOB2DAY - Job Board Platform} \href{https://frontend.harpaljob.com}{[Link]} \href{https://github.com/coding-with-maaz/JOB2DAY-BACKEND}{[GitHub]} \\
+    \textit{Tech Stack:} Node.js, Express, MySQL, Sequelize, Firebase, Flutter, TypeScript \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Comprehensive job board platform with RESTful APIs for job postings, applications, user authentication, and notifications. Built scalable backend with Node.js and Express, supporting Flutter mobile app with real-time features.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{ASIAN2DAY - Streaming Platform} \href{https://nazaarabox.com}{[Link]} \href{https://github.com/coding-with-maaz/NETFLEX_CLONE}{[GitHub]} \\
+    \textit{Tech Stack:} Laravel, Node.js, Flutter, MySQL, React, TypeScript \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Advanced streaming platform with live content delivery, user authentication, and real-time interactions. Built with Laravel backend, Node.js API, and Flutter mobile app.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{Medzfitt E-commerce} \href{https://medzfitt.com}{[Link]} \href{https://github.com/coding-with-maaz/Ecomerce_Store}{[GitHub]} \\
+    \textit{Tech Stack:} Laravel, PHP, MySQL, Tailwind CSS, JavaScript \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Complete Laravel-based e-commerce platform with shopping cart, product management, order processing, user reviews, and admin dashboard.
+    \end{itemize}
+  }}
+  
+  \small{\item{
+    \textbf{Flutter Ads Pro} \href{https://github.com/coding-with-maaz/FLUTTER-_ADS}{[GitHub]} \\
+    \textit{Tech Stack:} Flutter, Dart, Android, iOS \\
+    \begin{itemize}[itemsep=-1pt]
+      \item Comprehensive Flutter ads integration package supporting Android, iOS, Web, Windows, macOS, and Linux with simplified configuration.
+    \end{itemize}
+  }}
+\end{itemize}
+
+%--------TECHNICAL SKILLS------------
+\section{Technical Skills}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=-1pt]
+  \small{\item{
+    \textbf{Frontend:} JavaScript, TypeScript, React, Next.js, HTML5, CSS3, Tailwind CSS \\
+    \textbf{Backend:} Node.js, Express.js, Laravel, PHP, TypeScript \\
+    \textbf{Mobile:} Flutter, Dart, Android, iOS \\
+    \textbf{Database:} MySQL, PostgreSQL, SQLite, MongoDB, Firebase \\
+    \textbf{DevOps \& Tools:} Git, GitHub, Docker, Firebase, AdMob, Puppeteer, REST API
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\vspace{-4pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Bachelor's Degree in Computer Science
+  }}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
+

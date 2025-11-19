@@ -103,6 +103,19 @@ export function Contact() {
             <Card className="p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
               
+              <div className="mb-6 p-4 bg-muted/50 border border-border rounded-lg">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="text-foreground">Note:</strong> The contact form is currently not working. However, I can make it fully functional with Gmail SMTP integration. Please contact me directly at{" "}
+                  <a 
+                    href="mailto:muhamamdmaaz65@gmail.com" 
+                    className="text-primary hover:underline font-semibold"
+                  >
+                    muhamamdmaaz65@gmail.com
+                  </a>{" "}
+                  for now.
+                </p>
+              </div>
+              
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
